@@ -171,3 +171,65 @@
 // }
 
 // alert(getUserInfo());
+
+/*Task-13*/
+// Написати функцію calculateMonthlyExpenses, яка приймає:
+// витрати на їжу, транспорт, комунальні послуги та розваги.
+// Функція повинна повернути загальну суму витрат,
+// середню суму витрат на день (30 днів) та найбільшу категорію витрат.
+// Використати Math.max().
+// Суми округлити до двох знаків після коми.
+// console.log(calculateMonthlyExpenses(6000, 1500, 2500, 2000));
+// 'Витрати: 12000.00 грн. На день: 400.00 грн. Найбільша категорія: 6000.00 грн.'
+// console.log(calculateMonthlyExpenses(4000, 3000, 2000, 1000));
+// 'Витрати: 10000.00 грн. На день: 333.33 грн. Найбільша категорія: 4000.00 грн.'
+
+// function calculateMonthlyExpenses(food, transport, bills, entertainment) {
+//   const totalExpenses = (food + transport + bills + entertainment).toFixed(2);
+//   const expensesPerDay = (totalExpenses / 30).toFixed(2);
+//   const biggestExpense = Math.max(
+//     food,
+//     transport,
+//     bills,
+//     entertainment
+//   ).toFixed(2);
+//   return `Витрати: ${totalExpenses} грн. На день: ${expensesPerDay} грн. Найбільша категорія: ${biggestExpense} грн.`;
+// }
+
+/*Task-14*/
+// Написати функцію calculateDownloadTime, яка приймає:
+// розмір файлу в мегабайтах та швидкість інтернету в мегабайтах за секунду.
+// Функція повинна розрахувати час завантаження у секундах
+// та хвилинах.
+// Хвилини округлити вниз, секунди визначити як залишок.
+// console.log(calculateDownloadTime(600, 10));
+// 'Час завантаження: 1 хвилина 0 секунд.'
+// console.log(calculateDownloadTime(150, 5));
+// 'Час завантаження: 0 хвилин 30 секунд.'
+
+// function calculateDownloadTime(size, downloadSpeed) {
+//   const downloadTime = size / downloadSpeed;
+//   const minutes = Math.floor(downloadTime / 60);
+//   const seconds = downloadTime % 60;
+//   return `Час завантаження: ${minutes} хвилина ${seconds} секунд.`;
+// }
+
+/*Task-15*/
+// Написати функцію createProfile, яка приймає ім'я, прізвище та рік народження.
+// Функція повинна:
+// 1. Створити повне ім'я.
+// 2. Визначити довжину повного імені.
+// 3. Обчислити вік.
+// 4. Згенерувати випадковий ID від 1000 до 9999.
+// 5. Повернути всю інформацію у вигляді шаблонного рядка.
+// console.log(createProfile('Андрій', 'Коваленко', 2000));
+// 'Профіль: Андрій Коваленко. Вік: 26. ID: 5831. Довжина імені: 16.'
+// console.log(createProfile('Марія', 'Шевченко', 1998));
+// 'Профіль: Марія Шевченко. Вік: 28. ID: 1942. Довжина імені: 15.'
+
+// function createProfile(name, surname, birthYear) {
+//   const fullName = name + ' ' + surname;
+//   const currentYear = new Date().getFullYear();
+//   const id = Math.floor(Math.random() * 8999 + 1000);
+//   return `Профіль: ${fullName}. Вік: ${currentYear - birthYear}. ID: ${id}. Довжина імені: ${fullName.length}`;
+// }
