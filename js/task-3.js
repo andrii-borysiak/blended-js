@@ -94,6 +94,35 @@
 //     alert('Я вас не знаю');
 // }
 
+/*Task-5*/
+// Використайте цикл while, щоб вивести в console всі числа від 0 до 20 включно.
+
+// let counter = 0;
+
+// while (counter <= 20) {
+//   console.log(counter);
+//   counter += 1;
+// }
+
+/*Task-6*/
+// Напишіть функцію getNumbers(min, max), що приймає 2 параметри -
+// мінімальне і максимальне число відповідно.
+// Напишіть цикл всередині функції, який виводить у консоль
+// всі числа від max до min за спаданням.
+// Окрім цього, підрахуйте суму всіх парних чисел в цьому циклі
+// і поверніть її з функції.
+
+// function getNumbers(min, max) {
+//   let sum = 0;
+//   for (let i = max; i >= min; i--) {
+//     console.log(i);
+//     if (i % 2 === 0) {
+//       sum += i;
+//     }
+//   }
+//   return sum;
+// }
+
 /*Task-7*/
 // Напишіть функцію min(a, b), яка приймає 2 числа і повертає меньше з них.
 // Потрібно додати перевірку, що функція отримує саме числа, в іншому випадку
@@ -116,6 +145,39 @@
 // function isAdult(age) {
 //   return age >= 18 ? true : confirm('Вам є 18?');
 // }
+
+/*Task-9*/
+// Напишіть функцію fizzBuzz(num), яка приймає число і перевіряє кожне число від 1 до num:
+// Якщо число ділитися  без остачі на 3 - виводить в консоль 'fizz',
+// якщо ділиться  без остачі на 5 - виводить в консоль 'buzz',
+// якщо ділиться  без остачі і на 3, і на 5 - виводить в консоль 'fizzbuzz'.
+
+// function fizzBuzz(num) {
+//   for (let i = 1; i < num; i++) {
+//     if (i % 3 === 0 && i % 5 === 0) {
+//       console.log('fizzbuzz');
+//     } else if (i % 3 === 0) {
+//       console.log('fizz');
+//     } else if (i % 5 === 0) {
+//       console.log('buzz');
+//     }
+//   }
+// }
+
+/*Task-10*/
+// Напишіть цикл, який пропонує ввести
+// число більше 100 через prompt.
+// Якщо користувач ввів інше число - попросити
+// ввести ще раз.
+// Цикл повинен питати число, доки користувач не
+// введе число більше 100, чи не натисне кнопку
+// Cancel в prompt
+
+// let number;
+
+// do {
+//   number = prompt('Введіть число більше 100:');
+// } while (number <= 100 && number !== null);
 
 /*Task-11*/
 // Напишіть функцію, яка приймає адресу сайта url та перевіряє чи закінчується значення
@@ -166,3 +228,139 @@
 // console.log(extractBetween('Hello, [world]!', '[', ']')); // "world"
 // console.log(extractBetween('Hello, [world]!', '{', '}')); // ""
 // console.log(extractBetween('Hello, {world}!', '{', '}')); // "world"
+
+/*Task-13*/
+// Створіть функцію sumNumbers(min, max),
+// яка приймає два числа.
+// За допомогою циклу підрахуйте суму всіх чисел
+// від min до max включно.
+// Поверніть результат з функції.
+
+// function sumNumbers(min, max) {
+//   let sum = 0;
+//   for (let i = min; i <= max; i++) {
+//     sum += i;
+//   }
+//   return sum;
+// }
+
+/*Task-14*/
+// Створіть функцію sumEvenNumbers(min, max),
+// яка приймає два числа.
+// За допомогою циклу підрахуйте суму всіх парних
+// чисел у заданому діапазоні.
+// Поверніть результат з функції.
+
+// function sumEvenNumbers(min, max) {
+//   let sum = 0;
+//   for (let i = min; i <= max; i++) {
+//     if (i % 2 === 0) {
+//       sum += i;
+//     }
+//   }
+//   return sum;
+// }
+
+/*Task-15*/
+// Напишіть цикл while, який запитує у користувача
+// числа через prompt.
+// Потрібно підрахувати суму всіх введених чисел.
+// Якщо користувач натискає Cancel або залишає поле
+// порожнім — зупинити цикл.
+// Після завершення циклу вивести суму в консоль.
+
+// let sum = 0;
+// let number;
+
+// do {
+//   number = prompt('Введіть число:');
+//   sum += Number.isNaN(number) ? Number(number) : 0;
+// } while (number && number !== '');
+
+// console.log(sum);
+
+/*Task-16*/
+// Створіть функцію printRectangle(width, height),
+// яка приймає ширину та висоту прямокутника.
+// За допомогою вкладених циклів виведіть у консоль
+// прямокутник із символів *.
+// Наприклад, printRectangle(5, 3) виведе:
+//
+// *****
+// *****
+// *****
+
+// function printRectangle(width, height) {
+//   let result = '';
+//   for (let i = 0; i < height; i++) {
+//     for (let i = 0; i < width; i++) {
+//       result += '*';
+//     }
+//     result += '\n';
+//   }
+//   console.log(result);
+// }
+
+/*Task-17*/
+// Гра «Вгадай число»
+//
+// Комп'ютер загадує випадкове число від 1 до 100.
+// Користувач повинен вгадати його через prompt.
+//
+// Якщо введене число більше за загадане —
+// вивести alert('Занадто багато!').
+//
+// Якщо менше — alert('Занадто мало!').
+//
+// Якщо користувач вгадав — alert('Вітаю! Ви перемогли!').
+//
+// Додатково:
+// - Підраховуйте кількість спроб.
+// - Після перемоги виведіть кількість спроб у консоль.
+// - Якщо користувач натиснув Cancel — гра завершується.
+//
+// Використайте while.
+
+// const randomNumber = Math.floor(Math.random() * 99 + 1);
+// let userInput;
+// let attempt = 0;
+
+// do {
+//   userInput = prompt('Вгадайте число від 1 до 100:');
+//   attempt += 1;
+//   if (userInput === randomNumber) {
+//     alert('Вітаю! Ви перемогли!');
+//     console.log(attempt);
+//   } else if (userInput > randomNumber) {
+//     alert('Занадто багато!');
+//   } else if (userInput < randomNumber && userInput) {
+//     alert(`Занадто мало!`);
+//   }
+// } while (userInput);
+
+/*Task-18*/
+// 🔐 Генератор пароля
+//
+// Створіть функцію generatePassword(length),
+// яка генерує випадковий пароль заданої довжини.
+//
+// Використайте такі символи:
+// - великі літери;
+// - маленькі літери;
+// - цифри.
+// let characters =
+//   'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+//
+// Наприклад:
+// generatePassword(8) -> 'aB7kP2mQ'
+//
+// Кожен символ повинен вибиратися випадково.
+// Поверніть готовий пароль.
+
+// function generatePassword(length) {
+//   let password = '';
+//   for (let i = 0; i < length; i++) {
+//     password += characters[Math.floor(Math.random() * characters.length)];
+//   }
+//   return password;
+// }
