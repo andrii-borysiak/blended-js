@@ -278,34 +278,14 @@
 // Напишіть функцію, яка перетворює глибокий масив в одномірний. Не використовувати array.flat()
 // Очікується[1, 2, [3, 4, [5]]] => [1, 2, 3, 4, 5]
 
-// function flatArray(array) {
+// function flattenArray(array) {
 //   let result = [];
-//   let temp = Array.from(array);
-//   let hasArray = 1;
-
-//   while (hasArray) {
-//     for (let i = 0; i < temp.length; i++) {
-//       if (!Array.isArray(temp[i])) {
-//         result.push(temp[i]);
-//         if (i === temp.length - 1) {
-//           hasArray = 0;
-//         }
-//       } else {
-//         result = result.concat(temp[i]);
-//       }
+//   for (const element of array) {
+//     if (Array.isArray(element)) {
+//       result = result.concat(flattenArray(element));
+//     } else {
+//       result.push(element);
 //     }
-//     temp = result;
-//     result = [];
-//   }
-
-//   return temp;
-// }
-
-// function flatArray(array) {
-//   const temp = array.join().split(',');
-//   const result = [];
-//   for (const element of temp) {
-//     result.push(Number(element));
 //   }
 //   return result;
 // }
